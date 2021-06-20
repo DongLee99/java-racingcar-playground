@@ -13,4 +13,11 @@ public class CarTest {
         //Boolean result = Car.validation("동현");
         //assertThat(result).isEqualTo(false);
     }
+
+    @Test
+    public void 무브포지션() {
+        Car car = new Car("동현");
+        car.movePosition();
+        assertThat(car.getPosition()).isEqualTo(0);
+    }
 }
