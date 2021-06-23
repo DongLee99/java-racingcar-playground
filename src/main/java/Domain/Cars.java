@@ -11,10 +11,10 @@ public class Cars {
     }
 
     private void validation(List<Car> carList) {
-        int carCount = (int) carList.stream()
+        int distinctCount = (int) carList.stream()
                                         .distinct()
                                         .count();
-        if (carList.size() != carCount){
+        if (carList.size() != distinctCount){
             throw new IllegalArgumentException("에러 : 중복 발생");
         }
     }
