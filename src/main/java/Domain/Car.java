@@ -1,6 +1,6 @@
 package Domain;
 
-import java.util.Random;
+import Util.RandomNumber;
 
 public class Car {
     private final static int BOUNDARY = 10;
@@ -20,14 +20,8 @@ public class Car {
     }
 
     public void movePosition() {
-        Random random = new Random();
-        if (random.nextInt(BOUNDARY) > 3) {
+        if (RandomNumber.getRandomNumber(BOUNDARY) > 3) {
             position++;
         }
-        System.out.println(position);
-    }
-
-    public int getPosition() {
-        return position;
     }
 }

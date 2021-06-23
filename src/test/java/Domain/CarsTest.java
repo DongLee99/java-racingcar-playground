@@ -20,4 +20,10 @@ public class CarsTest {
         //Boolean result = cars.validation(Arrays.asList(new Car("동현"), new Car("정윤"), new Car("동현")));
         //assertThat(result).isEqualTo(false);
     }
+
+    @Test
+    public void Cars_play(){
+        Cars cars = new Cars(Arrays.asList(new Car("동현"), new Car("정윤"), new Car("동현")));
+        cars.play(5);
+    }
 }

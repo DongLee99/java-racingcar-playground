@@ -18,6 +18,7 @@ Car
 Cars
 * 복수의 Car (일급 컬렉션) O
 * game (우승자 1명이상 Ok) 
+* play 
 
 Input
 * String 

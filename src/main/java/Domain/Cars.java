@@ -6,11 +6,19 @@ public class Cars {
     private final List<Car> cars;
 
     public Cars(List<Car> cars) {
-        validation(cars);
+        duplicateValidation(cars);
         this.cars = cars;
     }
 
-    private void validation(List<Car> carList) {
+    public void play(int count) {
+        while(count > 0) {
+            cars.stream()
+                    .forEach(Car::movePosition);
+            count--;
+        }
+    }
+
+    private void duplicateValidation(List<Car> carList) {
         int distinctCount = (int) carList.stream()
                                         .distinct()
                                         .count();
